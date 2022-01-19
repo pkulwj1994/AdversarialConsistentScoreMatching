@@ -45,8 +45,8 @@ class TrainRunner(SampleRunner):
             start_epoch = states[2]
             step = states[3]
             ema_helper.load_state_dict(states[4])
-            if self.args.adversarial:
-                D.load_state_dict(states[5])
+            # if self.args.adversarial:
+            #     D.load_state_dict(states[5])
         else:
             start_epoch = 0
             step = 0
