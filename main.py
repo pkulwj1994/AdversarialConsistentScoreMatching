@@ -18,7 +18,7 @@ def parse_args_and_config():
 
     parser.add_argument('--config', type=str, required=True, help='Path to the config file')
     parser.add_argument('--seed', type=int, default=1234, help='Random seed')
-    parser.add_argument('--exp', type=str, default='exp', help='Path for saving running related data.')
+    parser.add_argument('--exp', type=str, default='/content/drive/MyDrive/AdvSM/exp', help='Path for saving running related data.')
     parser.add_argument('--doc', type=str, required=True, help='A string for documentation purpose. '
                                                                'Will be the name of the log folder.')
     parser.add_argument('--comment', type=str, default='', help='A string for experiment comment')
@@ -33,7 +33,7 @@ def parse_args_and_config():
     parser.add_argument('--stackedmnist', action='store_true', help='Whether to execute the StackedMNIST task')
 
     parser.add_argument('--resume_training', action='store_true', help='Whether to resume training')
-    parser.add_argument('-i', '--image_folder', type=str, default='images', help="The folder name of samples")
+    parser.add_argument('-i', '--image_folder', type=str, default='/content/drive/MyDrive/AdvSM/exp/images', help="The folder name of samples")
     parser.add_argument('--data_folder', default='/Datasets')
     parser.add_argument('--ni', action='store_true', help="No interaction. Suitable for Slurm Job launcher")
     parser.add_argument('--fid_folder', default='/scratch', help='where to store FID results')
